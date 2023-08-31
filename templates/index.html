@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script type="text/javascript" src="{%static 'js/Scripts.js' %}"></script>
+
+</head>
+<body>
+    <div class="nav">
+        <ul class="items">
+            <h1>Malnutriation</h1>
+            <li><a href="/">Home</a></li>
+            <li class="dropdown"><a href="">Visualizations</a>
+                <ul class="dropdown-con">
+                    <li><a href="/vis1/">Visualization 1</a></li>
+                    <li><a href="/vis2/">Visualization 2</a></li>
+                    <li><a href="/vis3/">Visualization 3</a></li>
+                    <li><a href="/vis4/">Visualization 4</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="">Dashboard</a>
+                <ul class="dropdown-con">
+                    <li><a href="/dashboard1/">Dashboard 1</a></li>
+                    <li><a href="/dashboard2/">Dashboard 2</a></li>
+                    <li><a href="/dashboard3/">Dashboard 3</a></li>
+                    <li><a href="/dashboard4/">Dashboard 4</a></li>
+                </ul></li>
+            <li class="dropdown"><a href="">Reports</a>
+                <ul class="dropdown-con">
+                    <li><a href="/report1/">Report 1</a></li>
+                    <li><a href="/report2/">Report 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="">Stories</a>
+                <ul class="dropdown-con">
+                    <li><a href="/story1/">Story 1</a></li>
+                    <li><a href="/story2/">Story 2</a></li>
+                </ul>
+            </li>
+            <li><a href="/checkbmi/">Check BMI</a></li>
+        </ul>
+    </div>
+    <section class="container">
+        {% block content %}
+        
+        {% endblock %}	
+    </section>
+</body>
+</html>
